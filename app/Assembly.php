@@ -15,5 +15,9 @@ class Assembly extends Model
     public function Assembly_Types() {
 		return $this->hasMany('App\Assembly_type','id_assembly_type','id_assembly_type');
 											   //campoexterno campoDelaTablaBase
-	}
+    }
+    
+    public function Assembly_asistants(){
+        return $this->hasOne('App\Assembly_asistant', 'id_assembly', 'id_assembly');
+    }
 }

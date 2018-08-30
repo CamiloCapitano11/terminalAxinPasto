@@ -8,11 +8,11 @@ class Assembly_type extends Model
 {
     protected $primaryKey = 'id_assembly_type';
 	protected $fillable = [
-        'id_assembly',
+        'description',
     ];
 
     public function Assemblies() {
-		return $this->hasOne('App\Assembly','id_assembly','id_assembly');
+		return $this->hasOne('App\Assembly','id_assembly_type','id_assembly_type');
 											   //campoexterno campoDelaTablaBase
 	}
 }

@@ -12,7 +12,7 @@ class Class_title extends Model
     ];
 
     public function Titles() {
-		return $this->hasOne('App\Title','id_assembly','id_assembly');
+		return $this->hasOne('App\Title','id_class_title','id_class_title');
 											   //campoexterno campoDelaTablaBase
 	}
 }
